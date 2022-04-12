@@ -1,0 +1,19 @@
+# Download the Dataset
+wget -P dataset https://www.minapharm.com/gShare/Pubmed5k.rar 
+unrar x dataset/Pubmed5k.rar  dataset
+
+#installing needed liberaries
+pip install pyLDAvis
+ip install "gensim==3.8.3"
+pip install spacy==2.2.0
+
+#installing spacy for lemmatization
+python3 -m spacy download en
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
+
+# Download LDA Mallet model
+wget -P models http://mallet.cs.umass.edu/dist/mallet-2.0.8.zip
+unzip  models/mallet-2.0.8.zip -d models
+
+
+
